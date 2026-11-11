@@ -66,11 +66,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Play"/>
+            android:text="Play"
+            android:id="@+id/buttonPlay"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Random"/>
+            android:text="Random"
+            android:id="@+id/buttonRandom"/>
     </LinearLayout>
 
 
