@@ -46,20 +46,20 @@ class MainActivity : ComponentActivity() {
         var random1=ThreadLocalRandom.current().nextInt(1, 3)
         var random2=ThreadLocalRandom.current().nextInt(1, 3)
         var random3=ThreadLocalRandom.current().nextInt(1, 3)
-        buttonPlay.setOnClickListener {
-            if(!checkbox1.isChecked)
-                text1.setText(random1)
-            if(!checkbox2.isChecked)
-                text2.setText(random2)
-            if(!checkbox3.isChecked)
-                text3.setText(random3)
-        }
+
         buttonRandom.setOnClickListener {
             random1=ThreadLocalRandom.current().nextInt(1, 3)
             random2=ThreadLocalRandom.current().nextInt(1, 3)
             random3=ThreadLocalRandom.current().nextInt(1, 3)
             Toast.makeText(this, "Valori pregatite: $random1, $random2, $random3", Toast.LENGTH_LONG).show()
         }
-
+        buttonPlay.setOnClickListener {
+            if(!checkbox1.isChecked)
+                text1.setText(random1.toString())
+            if(!checkbox2.isChecked)
+                text2.setText(random2.toString())
+            if(!checkbox3.isChecked)
+                text3.setText(random3.toString())
+        }
     }
 }
